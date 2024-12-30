@@ -1,0 +1,7 @@
+---
+json_rpc_url: "http://localhost:8899"
+websocket_url: "ws://localhost:8900"
+keypair_path: workdir/owner.json
+address_labels:
+  "11111111111111111111111111111111": System Program
+commitment: confirmed

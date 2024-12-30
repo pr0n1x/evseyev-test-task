@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+members = [
+    "app"
+]
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+serde_yaml = { version = "0.9" }
+snafu = { version =  "0.8.5" }
+url = { version = "2.5", features = ["serde"]}
+solana-sdk = { version = "2.1", features = ["full"] }
+solana-client = "2.1"
+spl-token = "7.0.0"
+spl-token-client = "0.13"
+spl-memo = "6.0.0"
+futures = "0.3"

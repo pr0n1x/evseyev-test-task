@@ -1,0 +1,103 @@
+rpc:
+  uri: http://localhost:8899
+  # rate_limit_per_sec: 10
+  # backoff:
+token:
+  owner: 5797YHsWt3sA2yDXZHApDsVTpS1Me4LQksrqPb7aKcxWQFa2NCjUNrK483Ndoj7qvKMixpbjAJsknfr6qrsjB35e
+  mint: yphZj9Qd8kNkpDk3As4GsjxR4HomNbkt11t6St5KH9btERKtkuyGHQGhnEbXhNtqSrKkkzvZmykdZ21kRQYKCmx
+test:
+  mint: 7XTkbxSnDEvrUN4NMX3M6p3Ajtz6K4m3BvuPR3bPdWaE # see above yphZj9Qd8kNkpDk3As4GsjxR4HomNbkt11t6St5KH9btERKtkuyGHQGhnEbXhNtqSrKkkzvZmykdZ21kRQYKCmx
+  transfers:
+    sols:
+      - { from: 0, to: 10, amount: 10 }
+      - { from: 1, to: 11, amount: 10 }
+      - { from: 2, to: 12, amount: 10 }
+      - { from: 3, to: 13, amount: 10 }
+      - { from: 4, to: 14, amount: 10 }
+      - { from: 5, to: 15, amount: 10 }
+      - { from: 6, to: 16, amount: 10 }
+      - { from: 7, to: 17, amount: 10 }
+      - { from: 8, to: 18, amount: 10 }
+      - { from: 9, to: 19, amount: 10 }
+      - { from: 20, to: 30, amount: 10 }
+      - { from: 21, to: 31, amount: 10 }
+      - { from: 22, to: 32, amount: 10 }
+      - { from: 23, to: 33, amount: 10 }
+      - { from: 24, to: 34, amount: 10 }
+      - { from: 25, to: 35, amount: 10 }
+      - { from: 26, to: 36, amount: 10 }
+      - { from: 27, to: 37, amount: 10 }
+      - { from: 28, to: 38, amount: 10 }
+      - { from: 29, to: 39, amount: 10 }
+    tokens:
+      - { from: 0, to: 10, amount: 10 }
+      - { from: 1, to: 11, amount: 10 }
+      - { from: 2, to: 12, amount: 10 }
+      - { from: 3, to: 13, amount: 10 }
+      - { from: 4, to: 14, amount: 10 }
+      - { from: 5, to: 15, amount: 10 }
+      - { from: 6, to: 16, amount: 10 }
+      - { from: 7, to: 17, amount: 10 }
+      - { from: 8, to: 18, amount: 10 }
+      - { from: 9, to: 19, amount: 10 }
+      - { from: 20, to: 30, amount: 10 }
+      - { from: 21, to: 31, amount: 10 }
+      - { from: 22, to: 32, amount: 10 }
+      - { from: 23, to: 33, amount: 10 }
+      - { from: 24, to: 34, amount: 10 }
+      - { from: 25, to: 35, amount: 10 }
+      - { from: 26, to: 36, amount: 10 }
+      - { from: 27, to: 37, amount: 10 }
+      - { from: 28, to: 38, amount: 10 }
+      - { from: 29, to: 39, amount: 10 }
+wallets:
+  - 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

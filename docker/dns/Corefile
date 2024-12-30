@@ -1,0 +1,10 @@
+. {
+    cache
+    hosts /etc/hosts . {
+        fallthrough
+    }
+    forward . 127.0.0.11
+    forward . 8.8.8.8
+    errors
+    log
+}

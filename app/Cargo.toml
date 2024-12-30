@@ -1,0 +1,29 @@
+[package]
+name = "evseyev-test-task"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+snafu = { workspace = true }
+url = { workspace = true }
+solana-sdk = { workspace = true }
+solana-client = { workspace = true }
+spl-token = { workspace = true }
+spl-token-client = { workspace = true }
+spl-memo = { workspace = true, features = ["no-entrypoint"] }
+futures = { workspace = true }
+
+clap = { version = "4.5", features = [ "default", "derive", "env", "unicode" ] }
+clap_complete = "4.5"
+
+#[dev-dependencies]
+#solana-program-test = "2.1"
+
+[lints.rust]
+unused = "allow"
+dead_code = "allow"
+#unsafe_code = "forbid"

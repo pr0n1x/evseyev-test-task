@@ -1,0 +1,17 @@
+# install direnv
+# make .envrc symlink to this file in the root of the project
+
+export COMPOSE_PROJECT_NAME=evseyev-test-task
+export COMPOSE_PROFILES=localnet
+COMPOSE_PROJECT_PATH="$(pwd)"
+export COMPOSE_PROJECT_PATH
+#COMPOSE_FILE=docker-compose.yml
+if [ -f "${COMPOSE_PROJECT_PATH}/docker-compose.env" ]; then
+  COMPOSE_ENV_FILES=${COMPOSE_PROJECT_PATH}/docker-compose.env
+else
+  COMPOSE_ENV_FILES=${COMPOSE_PROJECT_PATH}/docker-compose.dist.env
+fi
+if [ -f "${COMPOSE_PROJECT_PATH}/secret.env" ]; then
+  COMPOSE_ENV_FILES="${COMPOSE_ENV_FILES},${COMPOSE_PROJECT_PATH}/secret.env"
+fi
+export COMPOSE_ENV_FILES

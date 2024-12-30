@@ -1,0 +1,52 @@
+services:
+
+  dns:
+    profiles: [ localnet ]
+    image: coredns/coredns:latest
+    volumes:
+      - ./docker/dns/Corefile:/Corefile:ro
+    command: -conf /Corefile
+    restart: always
+    networks:
+      default-network:
+        ipv4_address: ${COMPOSE_NET_DNS_IP}
+    extra_hosts:
+      - dns:${COMPOSE_NET_DNS_IP}
+      - host.docker.internal:host-gateway
+
+  solana-test-validator:
+    image: solanalabs/solana:stable
+    profiles: [ localnet ]
+    environment:
+      RUST_LOG: solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=info,solana_bpf_loader=debug,solana_rbpf=trace
+    entrypoint: [ "bash", "-c" ]
+    volumes:
+      - solana-test-ledger:/var/lib/solana/test-ledger
+    command:
+      - >-
+        cd /var/lib/solana/;
+        solana-test-validator
+        --ledger /var/lib/solana/test-ledger
+        --limit-ledger-size 1000000
+        --gossip-host solana-test-validator
+        --gossip-port 64898
+    networks: [ default-network ]
+    ports:
+      - "8899:8899"
+      - "8900:8900"
+      - "9900:9900"
+
+volumes:
+  solana-test-ledger:
+
+networks:
+  default-network:
+    driver: bridge
+    # name: my-network
+    # attachable: true
+    ipam:
+      driver: default
+      config:
+        - subnet: ${COMPOSE_NET_SUBNET}
+          ip_range: ${COMPOSE_NET_IP_RANGE}
+          gateway: ${COMPOSE_NET_GATEWAY}
